@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鶏肉メニュー</title>
+<style type="text/css">
+body{
+	background-color: #3e2723;
+	color:white;
+}
+.header {
+    text-align: center;
+    font-size: 36px; /* 店名の文字サイズ */
+    font-weight: bold; /* 太字 */
+    margin: 20px 0; /* 上下の余白 */
+}
+ul.ddmenu {
+	margin: 0px;
+	/* メニューバー外側の余白(ゼロ)*/
+	padding: 0px 0px 0px 15px; 
+	/* メニューバー内側の余白(左に15px) */
+	background-color: #cc0000; 
+	/* バーの背景色(濃い赤色) */
+}
+
+ul.ddmenu li {
+width: 125px;           
+/* メニュー項目の横幅(125px) */
+display: inline-block;
+/* ★1:横並びに配置する*/
+list-style-type: none;
+/* ★2:リストの先頭記号を消す*/
+position: relative;
+/* ★3:サブメニュー表示の基準位置にする*/
+}
+
+ul.ddmenu a {
+	background-color: #cc0000;
+	/* メニュー項目の背景色(濃い赤色) */
+	color: white;
+	/* メニュー項目の文字色(白色) */
+	line-height: 40px;
+	text-align: center;
+	/* メニュー項目のリンクの高さ(40px) */
+	/* メインメニューの文字列の配置(中央寄せ) */
+	text-decoration: none;
+	/* メニュー項目の装飾(下線を消す) */
+	font-weight: bold;
+	/* 太字にする*/
+	display: block;            
+}
+
+ul.ddmenu ul {
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	/* ★1:標準では非表示にする*/
+	/* ★2:サブメニュー外側の余白(ゼロ) */
+	/* ★3:サブメニュー内側の余白(ゼロ) */
+	
+	position: absolute;
+	
+	/* ★4:絶対配置にする*/
+ }
+
+ul.ddmenu ul {
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	/* ★1:標準では非表示にする*/
+	/* ★2:サブメニュー外側の余白(ゼロ) */
+	/* ★3:サブメニュー内側の余白(ゼロ) */
+	position: absolute;
+	/* ★4:絶対配置にする*/
+}
+
+ul.ddmenu a:hover {
+ background-color: #ffdddd;
+	/* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+	color: #dd0000;
+	/* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+ }
+ ul.ddmenu li:hover ul {
+	 display: block;
+	 /* ★5:マウスポインタが載っている項目の内部にあるリストを表示する*/
+ }
+.container {
+    display: flex; /* Flexboxを使用して横並び */
+    flex-wrap: wrap; /* 横並びのアイテムが幅を超えた場合、次の行に回るようにする */
+    gap: 20px; /* アイテム間にスペースを確保 */
+}
+
+.menu-item {
+    width: 100%; /* 各メニューアイテムの幅 */
+	max-width: 400px;
+    display: flex;
+    flex-direction: column; /* 画像と文章を縦に並べる */
+    align-items: center; /* 中央揃え */
+}
+.menu-item img {
+    width: 100%; /* 画像を100%の幅に合わせる */
+    height: auto; /* 高さは自動調整 */
+    margin-bottom: 10px; /* 画像と文章の間にスペース */
+}
+
+.text-container {
+    text-align: center; /* 文章を中央に揃える */
+    line-height: 1.6; /* 行間を調整 */
+}
+
+.text-container p {
+    margin-bottom: 10px; /* 各段落の間にスペース */
+}
+	</style>
+</head>
+
+<!-- 実際には#にURLを記述 -->
+
+<body>
+<div class="header">
+    牛工大
+</div>
+<ul class="ddmenu">
+   <li><a href="gyukoudai.html">HOME</a></li>
+   <li><a href="menu.html">メニュー</a>
+      <ul>
+         <li><a href="gyu.html">牛肉</a></li>
+         <li><a href="pork.html">豚肉</a></li>
+         <li><a href="chikin.html">鶏肉</a></li>
+      </ul>
+   </li>
+   <li><a href="sorry.html">お問い合わせ</a>
+   </li>
+	</ul>
+<div class="container">
+    <!-- 牛肉メニュー -->
+    <div class="menu-item">
+        <img src="tori_momo.jpg" alt="鶏モモ"/>
+        <div class="text-container">
+            <h3>鶏モモ</h3>
+            <p>筋肉の味方！脂質が気になるあなたへ<br>
+				お子様にも大人気のメニューです。<br>
+				・１人前　４００円
+			</p>
+        </div>
+    </div>
+
+    <!-- 豚肉メニュー -->
+    <div class="menu-item">
+        <img src="tori_yagen.jpg" alt="ハラミ付きやげん"/>
+        <div class="text-container">
+            <h3>ハラミ付きやげん</h3>
+            <p>ハラミのついたコリコリ軟骨<br>
+				ジューシーな味わいと食感がたまりません!<br>
+				・１人前　６００円
+			</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
